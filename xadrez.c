@@ -2,7 +2,7 @@
 
 int main (){
 
-    int bispo = 0, torre = 0, rainha = 0; // Inicializando as variáveis de controle
+    int bispo = 0, torre = 0, rainha = 0, cavalo = 0, movimento = 1; // Inicializando as variáveis de controle
     printf("Bem-vindo ao jogo de xadrez!\n"); // Mensagem de boas-vindas
     printf("Neste jogo, você pode escolher entre três peças: bispo, torre, rainha e cavalo.\n"); // Explicação do jogo
     printf("Escolha uma das pecas do xadrez:\n"); // Solicitação para o usuário escolher uma peça
@@ -12,6 +12,7 @@ int main (){
     printf("B - Bispo\n"); // Opção para o bispo
     printf("T - Torre\n"); // Opção para a torre
     printf("R - Rainha\n"); // Opção para a rainha
+    printf("C - Cavalo\n"); // Opção para o cavalo 
     printf("Digite a letra correspondente a peca escolhida: "); // Solicitação para o usuário digitar a letra correspondente à peça escolhida
     scanf(" %c", &escolha); // Leitura da escolha do usuário
     printf("\n");
@@ -41,10 +42,22 @@ int main (){
             printf("Esquerda.\n");  // Movimento da rainha
         }
         break;
+    case 'C':
+        printf("O cavalo se moveu em L.\n"); // Mensagem informando o movimento do cavalo
+        while (movimento--)
+        {
+            for (int i = 0; i < 2; i++) // Loop para simular o movimento do cavalo
+            {
+                printf("Baixo, "); // Movimento do cavalo
+            }
+            printf("Esquerda.\n"); // Movi 
+        break;
     default:
         printf("Escolha invalida.\n"); // Mensagem de erro caso a escolha não seja válida
         break;
     }
 
     return 0;
+}
+
 }
